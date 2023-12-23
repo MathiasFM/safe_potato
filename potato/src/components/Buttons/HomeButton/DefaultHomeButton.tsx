@@ -1,5 +1,6 @@
 import { useTheme } from '@mui/material/styles';
 import { Button } from '@mui/material';
+import { ReactComponent as PotatoIcon } from '../../../assets/potato.svg';
 
 function DefaultHomeButton({ handleClick }: { handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void }) {
   const theme = useTheme();
@@ -16,7 +17,9 @@ function DefaultHomeButton({ handleClick }: { handleClick: (event: React.MouseEv
   };
 
   return (
-    <Button sx={buttonStyle} onClick={handleClick}> Potato </Button>
+    <Button onClick={handleClick}>
+      <PotatoIcon />
+    </Button>
   );
 }
 
