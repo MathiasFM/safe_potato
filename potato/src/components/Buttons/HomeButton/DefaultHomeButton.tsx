@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material/styles';
 import { Button } from '@mui/material';
-import { ReactComponent as PotatoIcon } from '../../../assets/potato.svg';
+import PotatoIcon from '../../../assets/potato.svg';
 
 function DefaultHomeButton({ handleClick }: { handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void }) {
   const theme = useTheme();
@@ -8,7 +8,6 @@ function DefaultHomeButton({ handleClick }: { handleClick: (event: React.MouseEv
   const buttonStyle = {
     variant: 'contained',
     color: "white",
-    backgroundColor: theme.palette.success.main,
     borderColor: theme.palette.secondary.main,
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
@@ -17,8 +16,8 @@ function DefaultHomeButton({ handleClick }: { handleClick: (event: React.MouseEv
   };
 
   return (
-    <Button onClick={handleClick}>
-      <PotatoIcon />
+    <Button sx={buttonStyle} onClick={handleClick}>
+      <img src={PotatoIcon} className="logo react" alt="React logo" />
     </Button>
   );
 }
