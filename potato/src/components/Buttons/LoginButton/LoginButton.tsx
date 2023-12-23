@@ -14,7 +14,7 @@ function LoginButton() {
   const handleMember = () => {
     console.log("Member");
     setAnchorEl(null);
-    navigate("/member");
+    navigate("/mock");
   }
 
 
