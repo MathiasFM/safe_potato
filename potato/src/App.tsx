@@ -7,6 +7,7 @@ import { HomePage } from './pages/HomePage';
 import { NoPage } from './pages/NoPage';
 import { Header } from './components/Header/Header';
 import { MemberPage } from './pages/MemberPage';
+import { GuestPage } from './pages/GuestPage';
 
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ function App() {
 						<Routes>
 							<Route path='/' element={<HomePage />} />
 							<Route path='/member-login' element={<MemberPage />} />
+							<Route path='/guest' element={<GuestPage />} />
 							<Route path='*' element={<NoPage />} />
 						</Routes>
 				</Box>
