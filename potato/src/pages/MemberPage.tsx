@@ -8,7 +8,7 @@ function MemberPage() {
 
   return (
     <BasePage alert={alert}>
-      <MemberLoginPage />
+      <MemberLoginPage alert={alert} />
     </BasePage>
   )
 }
