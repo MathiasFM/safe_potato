@@ -1,10 +1,9 @@
 import { useState } from "react";
-import BasePage from "../components/BasePage/BasePage";
-import useAlert from "../hook/useAlert";
+import useAlert from "../../hook/useAlert";
 import { Button, Card, Container, Stack, TextField, Typography } from "@mui/material";
 
 
-function MockPage() {
+function MemberLoginPage() {
   const alert = useAlert();
 
   const [username, setUsername] = useState<String>('');
@@ -28,24 +27,22 @@ function MockPage() {
   }
 
   return (
-    <BasePage alert={alert}>
-      <Container maxWidth="sm">
+    <Container maxWidth="sm">
         <Card sx={{ 
-          color: 'text.secondary',
-          bgcolor: 'background.paper',
-          boxShadow: 20,
-          p: 2,
-         }}>
-          <Stack flexDirection={"column"} gap={2}>
-            <Typography variant="h6">Sign In</Typography>
-            <TextField label="Username" onChange={v => setUsername(v.target.value)} />
-            <TextField label="Password" onChange={v => setPassword(v.target.value)} />
-            <Button onClick={handleMock} variant="outlined" color="info">Login</Button>
-          </Stack>
+            color: 'text.secondary',
+            bgcolor: 'background.paper',
+            boxShadow: 20,
+            p: 2,
+            }}>
+            <Stack flexDirection={"column"} gap={2}>
+                <Typography variant="h6">Sign In</Typography>
+                <TextField label="Username" onChange={v => setUsername(v.target.value)} />
+                <TextField label="Password" onChange={v => setPassword(v.target.value)} />
+                <Button onClick={handleMock} variant="outlined" color="info">Login</Button>
+            </Stack>
         </Card>
-      </Container>
-    </BasePage>
+    </Container>
   )
 }
 
-export { MockPage };
+export { MemberLoginPage };

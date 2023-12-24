@@ -6,7 +6,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { HomePage } from './pages/HomePage';
 import { NoPage } from './pages/NoPage';
 import { Header } from './components/Header/Header';
-import { MockPage } from './pages/MockPage';
+import { MemberPage } from './pages/MemberPage';
+
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,7 @@ function App() {
 						<Header />
 						<Routes>
 							<Route path='/' element={<HomePage />} />
-							<Route path='mock' element={<MockPage />} />
+							<Route path='/member-login' element={<MemberPage />} />
 							<Route path='*' element={<NoPage />} />
 						</Routes>
 				</Box>
