@@ -88,7 +88,7 @@ function MemberLoginPage( props: MemberLoginPageProps ) {
                 <Button onClick={handleMock} variant="outlined" color="info">Login</Button>
                 <Button size="small" color="info">Forgot password?</Button>
                 <Button onClick={handleRegister} variant="contained" color="info">Register</Button>
-                <MemberRegisterPage open={showRegister} handleClose={handleRegister} />
+                <MemberRegisterPage open={showRegister} handleClose={handleRegister} alert={props.alert}/>
             </Stack>
         </Card>
     </Container>
